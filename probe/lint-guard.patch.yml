@@ -1,0 +1,33 @@
+# lint-guard probe overlay: mount the experimental Claude Code mods bridge,
+# then the mod (chain order). The model route is the runtime's own DeepSeek
+# Messages adapter repointed at a scripted local Messages server, so the run
+# is deterministic and free. Relative names anchor to this file.
+- insert:
+    - id: claude-code-mods
+      name: '@deepseek-ai/dsh-experimental-claude-code-mods'
+      config:
+        bandColumns: 120
+        bandRows: 10
+    - id: claude-code-mod-lint-guard
+      name: './mod/lint-guard/index.mjs'
+      config:
+        pattern: 'src/**/*.js'
+        gaps: true
+
+# Scripted local model: repoint the DeepSeek API-key route at the local
+# Messages-compatible server, disable the account route, and make the
+# scripted model the default.
+- id: llm-deepseek
+  config:
+    baseURL: 'http://127.0.0.1:8931'
+    models:
+      - id: scripted-1
+        name: Scripted Probe Model
+        contextWindow: 100000
+        maxTokens: 4096
+- id: llm-deepseek-account
+  disabled: true
+- id: agent-default-model
+  config:
+    provider: deepseek-official
+    model: scripted-1

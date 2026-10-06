@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "lint-guard",
+  "version": "0.1.0",
+  "description": "An ordinary eslint wrapper: lints after every Write/Edit, a /lint command, and a band showing current findings.",
+  "author": {
+    "name": "interop-probe"
+  },
+  "userConfig": {
+    "pattern": {
+      "type": "string",
+      "title": "Lint pattern",
+      "default": "src/**/*.js",
+      "description": "Glob the /lint command lints"
+    },
+    "gaps": {
+      "type": "boolean",
+      "title": "Run gap probes",
+      "default": true,
+      "description": "Run the documented-gap probe battery at session start"
+    }
+  }
+}

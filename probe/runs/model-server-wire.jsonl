@@ -1,0 +1,18 @@
+{"event":"http","method":"POST","url":"/v1/messages","bytes":79392,"headers":{"betas":null,"auth":"present"}}
+{"event":"request","beat":0,"model":"scripted-1","stream":true,"toolCount":24,"lastMessage":"{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Rewrite src/payment.js so that total returns (a + b) * (1 + rate). Then stop.\"},{\"type\":\"text\",\"text\":\"Current runtime context. This snapshot supersede"}
+{"event":"tool-call-planned","tool":"read","input":{"file_path":"src/payment.js"}}
+{"event":"response","beat":0,"stopReason":"tool_use"}
+{"event":"http","method":"POST","url":"/v1/messages","bytes":49422,"headers":{"betas":null,"auth":"present"}}
+{"event":"request","beat":0,"model":"scripted-1","stream":true,"toolCount":0,"lastMessage":"{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Generate the session title from this JSON array of human messages:\\n[{\\\"seq\\\":8,\\\"text\\\":\\\"Rewrite src/payment.js so that total returns (a + b) * (1 + "}
+{"event":"response","beat":0,"stopReason":"end_turn"}
+{"event":"http","method":"POST","url":"/v1/messages","bytes":40886,"headers":{"betas":null,"auth":"present"}}
+{"event":"request","beat":1,"model":"scripted-1","stream":true,"toolCount":24,"lastMessage":"{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_probe_1\",\"content\":[{\"type\":\"text\",\"text\":\"<path>/Users/cs/Desktop/fun/dsh-claude-code-mods/probe/src/payment.js</path>\\n<type>file"}
+{"event":"tool-call-planned","tool":"write","input":{"file_path":"src/payment.js","content":"var rate = 0.1;\n\nfunction total(a, b) {\n  return (a + b) * (1 + rate);\n}\n\nmodule.exports = { total, rate };\n"}}
+{"event":"response","beat":1,"stopReason":"tool_use"}
+{"event":"http","method":"POST","url":"/v1/messages","bytes":40991,"headers":{"betas":null,"auth":"present"}}
+{"event":"request","beat":2,"model":"scripted-1","stream":true,"toolCount":24,"lastMessage":"{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_probe_1\",\"content\":[{\"type\":\"text\",\"text\":\"[lint-guard] eslint after edit: 1 file(s), 1 finding(s) — no-var: Unexpected var, use le"}
+{"event":"tool-call-planned","tool":"bash","input":{"description":"probe","command":"echo lint-guard-probe"}}
+{"event":"response","beat":2,"stopReason":"tool_use"}
+{"event":"http","method":"POST","url":"/v1/messages","bytes":40733,"headers":{"betas":null,"auth":"present"}}
+{"event":"request","beat":3,"model":"scripted-1","stream":true,"toolCount":24,"lastMessage":"{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_probe_1\",\"content\":[{\"type\":\"text\",\"text\":\"lint-guard-probe\\n\"}],\"is_error\":false}]}"}
+{"event":"response","beat":3,"stopReason":"end_turn"}

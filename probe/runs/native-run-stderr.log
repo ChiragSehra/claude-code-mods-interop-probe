@@ -1,0 +1,4 @@
+(node:64797) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/cs/Desktop/fun/dsh-claude-code-mods/probe/native/lint-guard-native.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/cs/Desktop/fun/dsh-claude-code-mods/probe/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)

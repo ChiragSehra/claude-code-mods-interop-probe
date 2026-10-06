@@ -1,0 +1,12 @@
+# Normalize line endings on push; everything here is text except the notes below.
+* text=auto
+
+# Explicit text types
+*.jsonl text
+*.log text diff
+
+# Binaries (none today; safe defaults)
+*.zst binary
+*.png binary
+*.gif binary
+*.jpg binary

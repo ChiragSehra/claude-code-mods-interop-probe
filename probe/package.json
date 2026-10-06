@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@deepseek-ai/dsh": "^0.2.1-alpha.1",
+    "@deepseek-ai/dsh-experimental-claude-code-mods": "^0.2.1-alpha.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5"
+  }
+}

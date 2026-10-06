@@ -1,0 +1,9 @@
+{
+  "name": "lint-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scratch project the probe agent works on",
+  "devDependencies": {
+    "eslint": "^9.39.5"
+  }
+}

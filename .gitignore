@@ -1,0 +1,42 @@
+# ---- Node / package managers ----
+node_modules/
+.npm/
+.pnpm-store/
+.pnpm-debug.log
+*.tsbuildinfo
+.eslintcache
+
+# ---- Secrets & local env ----
+.env
+.env.*
+*.local
+
+# ---- Logs & temp files ----
+# Evidence logs under probe/runs/ are part of the experiment record — keep those.
+*.log
+!probe/runs/*.log
+
+# ---- Project runtime artifacts (regenerable; archived copies live in probe/runs/) ----
+.lint-guard-trace.jsonl
+.lint-guard-report.txt
+
+# ---- Session / agent / hook state ----
+.mimosa/
+.claude/
+.zcode/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Editors / IDEs ----
+.idea/
+.vscode/
+*.swp
+
+# ---- Build output (future-proofing; nothing builds here today) ----
+dist/
+build/
+out/
+coverage/

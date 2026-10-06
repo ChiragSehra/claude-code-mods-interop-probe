@@ -1,0 +1,20 @@
+# Native-port run: the same lint job as a plain dsh plugin — no mods bridge.
+- insert:
+    - id: lint-guard-native
+      name: './native/lint-guard-native.ts'
+
+# Same scripted local model route as the compat-layer runs.
+- id: llm-deepseek
+  config:
+    baseURL: 'http://127.0.0.1:8931'
+    models:
+      - id: scripted-1
+        name: Scripted Probe Model
+        contextWindow: 100000
+        maxTokens: 4096
+- id: llm-deepseek-account
+  disabled: true
+- id: agent-default-model
+  config:
+    provider: deepseek-official
+    model: scripted-1

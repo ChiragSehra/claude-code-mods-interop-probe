@@ -1,0 +1,4 @@
+lint-guard report — 2026-10-06T15:03:03.597Z
+files: 1  problems: 1 (errors: 1)
+last: no-var: Unexpected var, use let or const instead.
+events seen: {"toolCheck":0,"turnStep":0,"agentSpawn":0,"uiRender":2,"promptSubmit":1}

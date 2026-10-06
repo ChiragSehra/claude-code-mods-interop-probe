@@ -1,0 +1,42 @@
+{"ts":"2026-10-06T15:03:03.364Z","event":"session.start","opts":"{\"pattern\":\"src/**/*.js\",\"gaps\":true}"}
+{"ts":"2026-10-06T15:03:03.364Z","call":"plugin.name/root","ok":true,"ms":0,"result":"\"{\\\"name\\\":\\\"lint-guard\\\",\\\"root\\\":\\\"/Users/cs/Desktop/fun/dsh-claude-code-mods/probe/mod/lint-guard/\\\"}\""}
+{"ts":"2026-10-06T15:03:03.364Z","call":"env.get(LINT_GUARD_PATTERN)","ok":true,"ms":0}
+{"ts":"2026-10-06T15:03:03.364Z","call":"command.register(lint)","ok":true,"ms":0}
+{"ts":"2026-10-06T15:03:03.364Z","call":"tool.register(lint_report)","ok":true,"ms":1}
+{"ts":"2026-10-06T15:03:03.365Z","call":"command.list","ok":true,"ms":0,"result":"[{\"name\":\"compact\",\"description\":\"Compact older conversation history\",\"source\":\"builtin\"},{\"name\":\"feedback\",\"description\":\"Record feedback about this session\",\"source\":\"builtin\"},{\"name\":\"goal\",\"description\":\"Set or view the goal for a ..."}
+{"ts":"2026-10-06T15:03:03.365Z","call":"tool.list","ok":true,"ms":0,"result":"25"}
+{"ts":"2026-10-06T15:03:03.365Z","call":"session.id","ok":true,"ms":1,"result":"\"session-dbeaf2b6-de33-4728-9f74-416c83610a27\""}
+{"ts":"2026-10-06T15:03:03.366Z","call":"session.cwd","ok":true,"ms":0,"result":"\"/Users/cs/Desktop/fun/dsh-claude-code-mods/probe\""}
+{"ts":"2026-10-06T15:03:03.366Z","call":"session.model","ok":true,"ms":0,"result":"\"scripted-1\""}
+{"ts":"2026-10-06T15:03:03.366Z","call":"session.version","ok":true,"ms":0,"result":"{\"version\":\"claude-code-mods/0.1\",\"engine\":\"deepseek-harness\"}"}
+{"ts":"2026-10-06T15:03:03.366Z","call":"session.usage","ok":true,"ms":0,"result":"{\"startedAt\":1791298983355,\"context\":{\"window\":0},\"rateLimits\":[]}"}
+{"ts":"2026-10-06T15:03:03.366Z","call":"session.messages","ok":true,"ms":0,"result":"0"}
+{"ts":"2026-10-06T15:03:03.366Z","call":"fs.write(.lint-guard-trace.jsonl)","ok":true,"ms":16}
+{"ts":"2026-10-06T15:03:03.382Z","call":"store.set(lint-guard:trace)","ok":true,"ms":14}
+{"ts":"2026-10-06T15:03:03.396Z","call":"fs.exists(src)","ok":true,"ms":1,"result":"true"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP settings.read","ok":false,"ms":0,"error":"lint-guard: no implementation for settings.read"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP fs.ancestors","ok":false,"ms":0,"error":"lint-guard: no implementation for fs.ancestors"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP process.spawn","ok":false,"ms":0,"error":"lint-guard: no implementation for process.spawn"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP session.repo","ok":false,"ms":0,"error":"lint-guard: no implementation for session.repo"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP config.list","ok":false,"ms":0,"error":"lint-guard: no implementation for config.list"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP telemetry.log","ok":false,"ms":0,"error":"lint-guard: no implementation for telemetry.log"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP ui.copy","ok":false,"ms":0,"error":"lint-guard: no implementation for ui.copy"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP prompt.read","ok":false,"ms":0,"error":"lint-guard: no implementation for prompt.read"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"GAP model.complete","ok":false,"ms":0,"error":"lint-guard: no implementation for model.complete"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"command.run(lint) [queued self-test]","ok":true,"ms":219,"result":"{\"text\":\"lint-guard: [lint-guard] 1 file(s), 1 finding(s)\"}"}
+{"ts":"2026-10-06T15:03:03.397Z","call":"fs.write(.lint-guard-trace.jsonl)","ok":true,"ms":14}
+{"ts":"2026-10-06T15:03:03.398Z","event":"command.run","command":"lint","args":"\"\""}
+{"ts":"2026-10-06T15:03:03.398Z","call":"process.run(eslint src)","ms":199,"result":"{\"exitCode\":1,\"stdoutBytes\":598,\"stderr\":\"\"}","ok":true,"summary":{"files":1,"problems":1,"errors":1,"line":"no-var: Unexpected var, use let or const instead."}}
+{"ts":"2026-10-06T15:03:03.411Z","call":"store.set(lint-guard:trace)","ok":true,"ms":7}
+{"ts":"2026-10-06T15:03:03.427Z","event":"prompt.submit","text":"Rewrite src/payment.js so that total returns (a + b) * (1 + rate). Then run exactly: echo lint-guard-probe. Then stop."}
+{"ts":"2026-10-06T15:03:03.551Z","event":"tool.call[post-lint]","tool":"Write","file":"src/payment.js","resultKeys":["result"]}
+{"ts":"2026-10-06T15:03:03.551Z","call":"process.run(eslint src/payment.js)","ms":181,"result":"{\"exitCode\":1,\"stdoutBytes\":598,\"stderr\":\"\"}","ok":true,"summary":{"files":1,"problems":1,"errors":1,"line":"no-var: Unexpected var, use let or const instead."}}
+{"ts":"2026-10-06T15:03:03.597Z","call":"fs.write(.lint-guard-report.txt)","ok":true,"ms":5}
+{"ts":"2026-10-06T15:03:03.603Z","call":"fs.write(.lint-guard-trace.jsonl)","ok":true,"ms":5}
+{"ts":"2026-10-06T15:03:03.608Z","call":"store.set(lint-guard:trace)","ok":true,"ms":7}
+{"ts":"2026-10-06T15:03:03.616Z","call":"command.run(lint) [settled]","ok":true,"result":"{\"text\":\"lint-guard: [lint-guard] 1 file(s), 1 finding(s)\"}"}
+{"ts":"2026-10-06T15:03:03.732Z","call":"store.set(lint-guard:findings)","ok":true,"ms":9}
+{"ts":"2026-10-06T15:03:03.741Z","call":"ui.log","ok":true,"ms":0}
+{"ts":"2026-10-06T15:03:03.741Z","call":"ui.toast","ok":true,"ms":0}
+{"ts":"2026-10-06T15:03:03.741Z","call":"ui.status","ok":true,"ms":0}
+{"ts":"2026-10-06T15:03:03.741Z","call":"fs.write(.lint-guard-trace.jsonl)"}
